@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/location_search"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:ems="10"
+            android:textColorHint="@color/blue"
+            android:hint="write any place name..."
+            tools:ignore="RtlCompat" />
+        <Button
+            android:id="@+id/search_address"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:onClick="onClick"
+           android:text="search"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:map="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/map"
+    android:layout_marginTop="45dp"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true"
+android:name="com.google.android.gms.maps.SupportMapFragment"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".searchonmap"
+    android:layout_alignParentLeft="true" />
+
+    <RelativeLayout
+        android:id="@+id/second_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/hospitals_nearby"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:onClick="onClick"
+            android:text="H"
+            tools:ignore="RtlCompat" />
+        <Button
+            android:id="@+id/ps_nearby"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+           android:layout_toEndOf="@+id/hospitals_nearby"
+            android:layout_marginLeft="20dp"
+            android:onClick="onClick"
+           android:text="P"
+            tools:ignore="RtlCompat" />
+        <Button
+            android:id="@+id/fh_nearby"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/ps_nearby"
+            android:onClick="onClick"
+            android:layout_marginLeft="20dp"
+            android:text="F"
+            tools:ignore="RtlCompat" />
+        <Button
+            android:id="@+id/back"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/ps_nearby"
+            android:onClick="onClick"
+            android:layout_marginLeft="100dp"
+           android:text="back"
+            tools:ignore="RtlCompat" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
